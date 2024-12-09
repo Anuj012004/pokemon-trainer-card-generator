@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    background-image: url(pokemon-1920x1080.jpg); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: #3c5aa6;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+#trainerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #3c5aa6;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #ffcb05;
+    box-shadow: 0 0 0 2px rgba(255,203,5,0.2);
+}
+
+button {
+    background-color: #ffcb05;
+    color: #3c5aa6;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #3c5aa6;
+    color: #ffcb05;
+}
+
+.trainer-card {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    width: 100%;
+    max-width: 350px;
+    min-height: 500px;
+    margin: 20px auto;
+    border-radius: 15px;
+    background-color: #fff;
+    background-image: url('cardBa.png'); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pokemon-image {
+    max-width: 155px;
+    max-height: 200px;
+    object-fit: contain;
+    
+    margin-top: 48px;
+}
+
+.trainer-card h2 {
+    color: #3c5aa6;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.trainer-card p {
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+        max-width: none;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .trainer-card {
+        width: 102%;
+        max-width: none;
+       
+        border: 1px solid black;
+    }
+
+    .pokemon-image {
+        max-width: 150px;
+        max-height: 150px;
+    }
+}

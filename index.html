@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Trainer Card Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Your Pokemon Trainer Card</h1>
+        
+        <form id="trainerInfo">
+            <input type="text" id="name" placeholder="Trainer Name" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <input type="text" id="town" placeholder="Hometown" required>
+            <input type="text" id="favPokemon" placeholder="Favorite Pokemon" required>
+            <select id="trainerType" required>
+                <option value="">Select Trainer Type</option>
+                <option value="Gym Leader">Gym Leader</option>
+                <option value="Elite Four">Elite Four</option>
+                <option value="Champion">Champion</option>
+                <option value="Trainer">Trainer</option>
+            </select>
+            <button type="submit" id="submit">Generate Card</button>
+        </form>
+
+        <div id="trainerCard" class="trainer-card" style="display: none;">
+            <h2 id="cardName"></h2>
+            <p>Age: <span id="cardAge"></span></p>
+            <p>Town: <span id="cardTown"></span></p>
+            <p>Trainer Type: <span id="cardTrainer"></span></p>
+            <p>Favorite Pokémon: <span id="cardFavoritePokemon"></span></p>
+            <p>Trainer Id: <span id="cardId"></span></p>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
